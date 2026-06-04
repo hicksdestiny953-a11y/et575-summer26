@@ -1,113 +1,85 @@
-/*
-Destiny Hicks 
-June 4, 2026
-lab 9: switch-case statement
-*/
+/* destiny hicks june 4, 2026 lab 9: switch-case statement */ 
+#include <iostream> 
+#include <string> // REQUIRED FOR STRING VARIABLES
+using namespace std; 
 
-#include <iostream>
-using namespace std;
-int main(){
-
-    cout<<"\n - - - - - Example 1: switch-case statement"<<endl;
-
-    int dayoff=0;
-
-    cout<<"Select a day-off:"<<endl;
-    cout<<"1 for Monday"<<endl;
-    cout<<"2 for Tuesday"<<endl;
-    cout<<"3 for Wednesday"<<endl;
-    cout<<"4 for Thursday"<<endl;
-    cout<<"5 for Friday"<<endl;
-
-    cin>>dayoff;
-    switch (dayoff)
-    {
-        case 1:
-        cout<<"You are off Monday"<<endl;
-        break;
-          case 2:
-        cout<<"You are off Tuesday"<<endl;
-        break;
-          case 3:
-        cout<<"You are off Wednesday"<<endl;
-        break;
-          case 4:
-        cout<<"You are off Thursday"<<endl;
-        break;
-          case 5:
-        cout<<"You are off Friday"<<endl;
-        break;
-        default:
-        cout<<"Wrong dayoff"<<endl;
-        break;
-    }
-cout<<"\n - - - - - Example 1: switch-case statement"<<endl;
-char gender;
-string selectedgender="";
-
-cout<<"Select a gender";
-cout<<"m for male"<<endl;
-cout<<"f for female"<<endl;
-cout<<"o for other"<<endl;
-cin>>gender;
-
-switch(gender)
-{
-    case 'm': case 'M':
-    selectedgender = "MALE";
-    break;
-    case 'f': case 'F':
-    selectedgender = "FEMALE";
-    break;
-    case 'o': case 'O':
-    selectedgender = "OTHER";
-    break;
-    default:
-    selectedgender ="UNKNOWN";
-    break;
-}
-cout<<"Selected gender ="<<selectedgender<<endl;
-
-
-
-cout<<"\n - - - - -EXERCISE - - - - - - - "<<endl;
-
-double number = 0.0;
-    char choice = ' ';
-
-   
-    cout << "Enter a number: ";
-    cin >> number;
-
+int main(){ 
+    cout<<"\n - - - - - example 1: switch-case statement"<<endl; 
+    int dayoff=0; 
+    cout<<"select a day-off:"<<endl; 
+    cout<<"1 for monday"<<endl; 
+    cout<<"2 for tuesday"<<endl; 
+    cout<<"3 for wednesday"<<endl; 
+    cout<<"4 for thursday"<<endl; 
+    cout<<"5 for friday"<<endl; 
+    cin>>dayoff; 
     
-    cout << "Do you want to double the number? (Y/N): ";
-    cin >> choice;
+    switch (dayoff) { 
+        case 1: cout<<"you are off monday"<<endl; break; 
+        case 2: cout<<"you are off tuesday"<<endl; break; 
+        case 3: cout<<"you are off wednesday"<<endl; break; 
+        case 4: cout<<"you are off thursday"<<endl; break; 
+        case 5: cout<<"you are off friday"<<endl; break; 
+        default: cout<<"wrong dayoff"<<endl; break; 
+    } 
+    
+    cout<<"\n - - - - - example 2: select a gender"<<endl; 
+    char gender; 
+    string selectedgender=""; 
+    cout<<"select a gender\n"; 
+    cout<<"m for male"<<endl; 
+    cout<<"f for female"<<endl; 
+    cout<<"o for other"<<endl; 
+    cin>>gender; 
+    
+    switch(gender) { 
+        case 'm': 
+        case 'M': 
+            selectedgender = "male"; 
+            break; 
+        case 'f': 
+        case 'F': 
+            selectedgender = "female"; 
+            break; 
+        case 'o': 
+        case 'O': 
+            selectedgender = "other"; 
+            break; 
+        default: 
+            selectedgender ="unknown"; 
+            break; 
+    } 
+    cout<<"selected gender ="<<selectedgender<<endl; 
+    
+       cout<<"\n - - - - -exercise - - - - - - - "<<endl; 
+    double number = 0.0; 
+    char choice = ' '; 
+    
+    // 1. FIX: Clear any previous input errors and empty the buffer
+    cin.clear();
+    cin.ignore(100, '\n');
 
-    switch (choice) {
-        
-        case 'Y':
-        case 'y':
+    cout << "enter a number: "; 
+    cin >> number; 
+    
+    cout << "do you want to double the number? (y/n): "; 
+    cin >> choice; 
+    
+    switch (choice) { 
+        case 'y': 
+        case 'Y': 
             number *= 2; 
-            break;
+            cout << "The doubled number is: " << number << endl; 
+            break; 
+        case 'n': 
+        case 'N': 
+            cout << "The number remains: " << number << endl; 
+            break; 
+        default: 
+            number = 0; 
+            cout << "Invalid choice. Number reset to: " << number << endl; 
+            break; 
+    } 
 
-        
-        case 'N':
-        case 'n':
-            break;
-
-    
-        default:
-            number = 0;
-            break;
-    }
-
-
-
-
-
-return 0;
-
+    return 0; 
 }
-
-
-  
