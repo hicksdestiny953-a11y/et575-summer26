@@ -55,7 +55,7 @@ int main(){
     double number = 0.0; 
     char choice = ' '; 
     
-    // 1. FIX: Clear any previous input errors and empty the buffer
+    
     cin.clear();
     cin.ignore(100, '\n');
 
