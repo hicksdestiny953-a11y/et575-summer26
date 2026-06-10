@@ -92,42 +92,39 @@ cout << "\n - - - - - - Example 6: while loop as a counter"<<endl;
     }
     cout<<"Collected number = "<<number<<endl;
 
-
-
-
-    cout << "\n - - - - - - EXERCISE 1 - - - - - - - - -"<<endl;
-    int sum = 0, count = 0;
     
-    for (int n = 20; n > 0; n -= 2) {
-        if (n % 3 == 0) {
-            count++;
-            continue; 
-        }
-        sum += n;
-    }
-    
+    // --- Exercise 1: Decrementing Loop and Multiples of 2 ---
+    cout << "--- Lab Exercise 1 ---" << endl;
+    int multipleCount = 0;
+
    
-    cout << "The sum is: " << sum << endl;
-    cout << "The count is: " << count << endl;
-    
+    for (int n = 21; n >= -21; n -= 5) {
+        cout << "Current loop counter: " << n << endl;
+        
+        
+        if (n % 2 == 0) {
+            multipleCount++;
+        }
+    }
+    cout << "Total times the counter was a multiple of 2: " << multipleCount << endl;
     cout << endl;
 
+    // --- Exercise 2: User Input and Incremental Loop ---
+    cout << "--- Lab Exercise 2 ---" << endl;
+    int startValue;
+
     
-   int i = 0, add = 0;
+    cout << "Enter the starting value for the loop: ";
+    cin >> startValue;
+
+    cout << "Looping values:" << endl;
     
-    while (i <= 10) {
-        i++;
-        if (i < 5 && i != 2) {   
-            cout << "i = " << i << endl;
-        }
-        else {
-            continue; 
-        }
-        add += i;
+    for (int counter = startValue; counter <= 30; counter += 4) {
+        cout << counter << " ";
     }
-    
-    
-    cout << "Add = " << add << endl;
+    cout << endl << endl;
+
+
 
       return 0;
 }
