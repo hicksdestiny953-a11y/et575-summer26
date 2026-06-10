@@ -2,7 +2,6 @@
 Destiny Hicks
 lab 10, loop mechanims
 June 9, 2026
-
 */
 #include <iostream>
 using namespace std;
