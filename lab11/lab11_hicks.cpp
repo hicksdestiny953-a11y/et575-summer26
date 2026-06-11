@@ -72,7 +72,7 @@ int main() {
     int i = 10;
 
     while (i > 5) {
-        i- -;
+        i--;
         if (i % 2 == 0) {
             count += i;
             continue;
