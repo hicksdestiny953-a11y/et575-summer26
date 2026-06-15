@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+int getMarks() {
+    int mark;
+    cin >> mark;
+
+    while (mark < 0 || mark > 100) {
+        cout << "Invalid mark. Enter again: ";
+        cin >> mark;
+    }
+
+    return mark;
+}
+
+int findTotal(int sub1, int sub2, int sub3) {
+    return sub1 + sub2 + sub3;
+}
+
+float findPercentage(int sub1, int sub2, int sub3) {
+    int total = findTotal(sub1, sub2, sub3);
+    return (total / 300.0) * 100;
+}
+
+char getGrade(float percent) {
+    if (percent >= 90)
+        return 'A';
+    else if (percent >= 80)
+        return 'B';
+    else if (percent >= 70)
+        return 'C';
+    else if (percent >= 60)
+        return 'D';
+    else
+        return 'F';
+}
+
+void showResult(int sub1, int sub2, int sub3, float percent, char grade) {
+    cout << "\nMarks entered: " << sub1 << ", " << sub2 << ", " << sub3 << endl;
+    cout << "Percentage: " << percent << "%" << endl;
+    cout << "Final Grade: " << grade << endl;
+}
+
+int main() {
+    int sub1, sub2, sub3;
+    float percent;
+    char grade;
+
+    cout << "Enter Subject 1 mark: ";
+    sub1 = getMarks();
+
+    cout << "Enter Subject 2 mark: ";
+    sub2 = getMarks();
+
+    cout << "Enter Subject 3 mark: ";
+    sub3 = getMarks();
+
+    percent = findPercentage(sub1, sub2, sub3);
+    grade = getGrade(percent);
+
+    showResult(sub1, sub2, sub3, percent, grade);
+
+    return 0;
+}
