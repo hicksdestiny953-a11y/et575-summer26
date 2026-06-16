@@ -1,8 +1,11 @@
 /* Destiny Hicks June 11, 2026 lab 15 : recursive function, built-function */ 
-#include <iostream> 
-#include <cmath> 
-#include <cstdlib> 
-#include <ctime> // Added to support time(0)
+#include <iostream>
+#include <cstdlib> // Required for rand()
+#include <cmath>   // Required for pow()
+using namespace std;
+
+// Global constant variable for gravity
+const float GRAVITY = 9.8;
 
 using namespace std; 
 
@@ -45,7 +48,6 @@ void printresult(int side1, int side2, float hyp){
     cout << "The hypotenuse of a right triangle with sides " << side1 << " and " << side2 << " is: " << hyp << endl; 
 } 
 
-// FIXED: Removed "int n" so it matches your main file call perfectly
 void randomnumber(){ 
     cout << rand() << endl; 
     cout << rand() << endl; 
@@ -54,4 +56,22 @@ void randomnumber(){
 
 int random_nag5_10(){ 
     return (-5 + rand() % 16); 
+}
+
+
+int generateRandomTime() {
+    return rand() % 100 + 1;
+}
+
+// 2. Falling Distance Function
+float calculateFallingDistance(int time) {
+    // formula: 0.5 * gravity * time^2
+    float distance = 0.5 * GRAVITY * pow(time, 2);
+    return distance;
+}
+
+// 3. Output Function
+void displayFallingResult(int time, float distance) {
+    cout << "The falling distance in " << time 
+         << " seconds is " << distance << " meters." << endl;
 }

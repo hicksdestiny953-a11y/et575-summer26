@@ -33,5 +33,18 @@ int main (){
     int r = random_nag5_10(); 
     cout<<r<<endl; 
     
+srand(time(0)); 
+
+    cout << "\n - - - - - - - - - - - - Exercise A - - - - - - - - - - - - - - - - -" << endl;
+
+    // Step 1: Generate the random time
+    int timeSeconds = generateRandomTime();
+
+    // Step 2: Calculate the distance using that time
+    float totalDistance = calculateFallingDistance(timeSeconds);
+
+    // Step 3: Display the formatted final result
+    displayFallingResult(timeSeconds, totalDistance);
+    
     return 0; 
 }
