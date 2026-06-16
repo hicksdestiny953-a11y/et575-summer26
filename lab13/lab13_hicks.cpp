@@ -43,6 +43,7 @@ cout<<"\n  - - - - - - - - - - Example 7: function calling function- - - "<<endl
 cout<<tripleaddition()<<endl; 
 
 
+cout<<"\n - - - - - - - - - - - - Excerise - - - - - - - - - - - - - - - - -"<<endl;
 
 
 

@@ -65,7 +65,7 @@ void printresult(int area){
 int addition(int a, int b){
     return a + b;
 }
-//function 2: returns thr triple of the sum of two numbers
+//function 2: returns the triple of the sum of two numbers
 int tripleaddition(){
     return 3*(addition(2,3));
 
